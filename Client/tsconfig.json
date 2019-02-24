@@ -1,0 +1,32 @@
+{
+    "compilerOptions":
+    {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "jsx": "react",
+        "target": "es6",
+        "module": "commonjs",
+        //"module": "es2015",
+        "declaration": false,
+        "allowSyntheticDefaultImports": true,        // enable import test from 'xxx';
+        "typeRoots": [
+            "@types",
+            "./@types"
+        ],
+        "types": [
+          "node"
+        ],
+        "moduleResolution": "node"
+        // "allowSyntheticDefaultImports": true,
+        // "skipLibCheck": true,
+        // "downlevelIteration": true
+        //"noImplicitAny": false // <-----
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
