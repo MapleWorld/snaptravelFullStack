@@ -54,10 +54,7 @@ export default class dataTable extends Component < Props > {
                         {this.props.hotelData.map(this.renderHotelData)}
                     </tbody>
                 </table>
-
             </div>
         )
     }
-
-
 }

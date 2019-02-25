@@ -4,16 +4,19 @@ import { ReduxState } from "./../../presentation";
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import FileData from './../../../../Server/src/Common/src/business/file-data';
 import * as fs from 'file-saver';
 import axios from 'axios';
 
 interface Props {
-    fileData: any;
     submitHotelData: (city, checkin, checkout) => void;
 }
 
-export default class ActionPanel extends Component < Props > {
+interface ComponentState {
+    city: string,
+    checkin: string,
+    checkout: string,
+}
+export default class ActionPanel extends Component < Props, ComponentState > {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -25,7 +28,8 @@ export default class ActionPanel extends Component < Props > {
 
     onChange(e) {
         this.setState({
-            [e.target.name]: e.target.value
+            ...this.state, 
+            [e.currentTarget.name]: e.currentTarget.value
         })
     }
 

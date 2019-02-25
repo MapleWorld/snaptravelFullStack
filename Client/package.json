@@ -12,8 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^9.3.0",
-    "awesome-typescript-loader": "^3.4.1",
-    "babel-core": "^6.2.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
@@ -21,14 +21,14 @@
     "chai-jquery": "^2.0.0",
     "jquery": "^3.0.0",
     "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
+    "mocha": "^6.0.1",
     "react-addons-test-utils": "^0.14.7",
     "react-redux": "^4.4.8",
     "source-map-loader": "^0.2.3",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack": "^4.29.5",
+    "webpack-dev-server": "^3.2.0"
   },
   "dependencies": {
     "@types/file-saver": "^1.3.0",
@@ -47,7 +47,7 @@
     "file-saver": "^1.3.3",
     "fs": "0.0.1-security",
     "jsonfile": "^4.0.0",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.11",
     "react": "^0.14.9",
     "react-dom": "^0.14.9",
     "react-dropzone": "^4.2.5",
