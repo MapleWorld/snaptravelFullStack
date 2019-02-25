@@ -36,12 +36,20 @@ export default class ActionPanel extends Component < Props > {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit.bind(this)}>
-                <label>City:<input type="text" name="city" onChange={this.onChange.bind(this)} /></label>
-                <label>Checkin:<input type="text" name="checkin" onChange={this.onChange.bind(this)} /></label>
-                <label>Checkout:<input type="text" name="checkout" onChange={this.onChange.bind(this)} /></label>
-                <button type="submit">Submit</button>
-            </form>
+            <div> 
+                <p>
+                    <div>Setting the default value for city as "cityA" which will sends the request to the server, 
+                        and the server will check the hotels aginst the hotels in the cache, perform filter on the hotels
+                        and return back the hotels within the wanted city location
+                    </div>
+                </p>
+                <form onSubmit={this.onSubmit.bind(this)}>
+                    <label>City:<input type="text" name="city" onChange={this.onChange.bind(this)}/></label>
+                    <label>Checkin:<input type="text" name="checkin" onChange={this.onChange.bind(this)}/></label>
+                    <label>Checkout:<input type="text" name="checkout" onChange={this.onChange.bind(this)}/></label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         );
     }
 }

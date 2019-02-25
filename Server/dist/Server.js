@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const http = require("http");
 const debug = require("debug");
+const hotelData_1 = require("./infrastructure/hotelData");
 const DEFAULT_PORT = 3000;
 class Server {
     constructor(app) {
@@ -13,6 +14,7 @@ class Server {
             console.log('Listening on ' + bind);
         };
         this.port = this.normalizePort(this.port);
+        app.set('hotelData', hotelData_1.hotelData);
         this.app = app.set('port', this.port);
         this.server = http.createServer(app);
     }

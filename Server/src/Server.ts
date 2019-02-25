@@ -1,8 +1,10 @@
 import * as http from 'http';
 import * as debug from 'debug';
 import * as express from 'express';
+import { hotelData } from './infrastructure/hotelData';
 import { home } from './presentation/home';
 import { executeOrders } from './presentation/execute-orders';
+
 
 const DEFAULT_PORT = 3000;
 
@@ -12,6 +14,7 @@ export default class Server {
     port: number|string = DEFAULT_PORT;
     constructor(app: express.Application) {
         this.port = this.normalizePort(this.port);
+        app.set('hotelData', hotelData);
         this.app = app.set('port', this.port);
         this.server = http.createServer(app);
     }

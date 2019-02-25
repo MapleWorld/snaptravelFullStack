@@ -16,12 +16,12 @@ export default class dataTable extends Component < Props > {
         return (
             <tr key={hotelData.id}>
                 <td>{hotelData.id}</td>
-                <td>{hotelData.name}</td>
-                <td>{hotelData.reviews}</td>
+                <td>{hotelData.hotel_name}</td>
+                <td>{hotelData.num_reviews}</td>
                 <td>{hotelData.address}</td>
-                <td>{hotelData.starts}</td>
+                <td>{hotelData.num_stars}</td>
                 <td>{hotelData.amenities}</td>
-                <td>{hotelData.image}</td>
+                <td>{hotelData.image_url}</td>
                 <td>$ {hotelData.snaptravelPrice}</td>
                 <td>$ {hotelData.retailPrice}</td>
             </tr>

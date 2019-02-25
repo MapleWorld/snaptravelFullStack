@@ -1,14 +1,17 @@
 export default interface HotelProfile {
     id: number;
-    name: string;
-    reviews: number;
+    hotel_name : string;
+    num_reviews : number;
     address: string;
-    stars: number;
-    amenities: number;
-    image: any;
+    num_stars : number;
+    amenities : number;
+    image_url : number;
     snaptravelPrice: number;
     retailPrice: number;
+    city: string;
 }
+
+
 
 
 
